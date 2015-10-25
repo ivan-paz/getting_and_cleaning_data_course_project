@@ -5,15 +5,15 @@
 #####################################################################
 
 #Read separate data and create a dataframe using cbind
-test<- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/test/X_test.txt")
-test.subjects<-read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/test/subject_test.txt")
-test.activities<-read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/test/y_test.txt")
+test<- read.table("UCI_HAR_Dataset/test/X_test.txt")
+test.subjects<-read.table("UCI_HAR_Dataset/test/subject_test.txt")
+test.activities<-read.table("UCI_HAR_Dataset/test/y_test.txt")
 
 testdf <- cbind(test.subjects,test.activities,test)
 
-training <- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/train/X_train.txt")
-training.subjects <- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/train/subject_train.txt")
-training.activities <- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/train/y_train.txt")
+training <- read.table("UCI_HAR_Dataset/train/X_train.txt")
+training.subjects <- read.table("UCI_HAR_Dataset/train/subject_train.txt")
+training.activities <- read.table("UCI_HAR_Dataset/train/y_train.txt")
 trainingdf<- cbind(training.subjects,training.activities,training)
 
 #merge both data
@@ -21,7 +21,7 @@ activity.df <- rbind(trainingdf,testdf)
 length(activity.df)
 
 ## First, open the variables names data frame.
-features <- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/features.txt") 
+features <- read.table("UCI_HAR_Dataset/features.txt") 
 ## Second, extract the column with the names, including the first two columns, to a vector and then assign it as column names of the data frame 
 d <- c("Subject", "Activity")
 features.names <- features[, 2]
@@ -38,7 +38,7 @@ activity.msd <- cbind(act.2columns, activity.msd)
 
 ## Use descriptive activity names to name the activities in the data set
 ## Read activity_labels.txt, and substitute values of "Activity" column of activity.msd dataframe to character values. 
-act.labels <- read.table("/Users/tuno/Documents/tuno/data_science_specialization/getting_and_cleanning_data/course_project/UCI_HAR_Dataset/activity_labels.txt")
+act.labels <- read.table("UCI_HAR_Dataset/activity_labels.txt")
 activity.msd$Activity <- act.labels$V2[activity.msd$Activity]
 
 
