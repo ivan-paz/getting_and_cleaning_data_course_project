@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 # Project description
-This project 
+This project uses the data from the original project, describe in the link given below, to select only the mean and standard deviations of every measurement out of a 561-feature vector with time and frequency domain variables, to later obtain the average of every measure per activity for every subject.
 
 ## data
 the data for the project is abailable at:
