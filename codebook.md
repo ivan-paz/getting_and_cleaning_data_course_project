@@ -17,7 +17,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Rougly speaking it contains data collected from the accelerometers from the Samsung Galaxy S smartphones for different users and different activities.
 
 
-## The script called run_analysis.R that does the following analysis: 
+## Processing
+The script called run_analysis.R that does the following analysis: 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 3. Uses descriptive activity names (like "SITTING", "STANDING", "SLEEPING", or "WALKING_DOWNSTAIRS") containing in the file activity_labels.txt to name the activities in the data set.
